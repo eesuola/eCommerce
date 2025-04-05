@@ -1,8 +1,16 @@
-import express from 'express';
+import express from "express";
 const routes = express.Router();
 // import { verifyToken } from '../middleware/auth.js';
-import { getCart, addToCart, removeFromCart } from '../controller/cart.js';
+import {
+  addItemToCart,
+  updateCart,
+  removeCart,
+  clearAllCarts,
+} from "../controller/cart.js";
 
+routes.post("/cart", addItemToCart);
+routes.post("/updateCart", updateCart);
+routes.delete("/deleteCart", removeCart);
+routes.delete("/deleteAllCarts", clearAllCarts);
 
-routes.post("/", addToCart);
-routes.get("/", getCart);
+export default routes;

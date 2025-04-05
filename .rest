@@ -2,9 +2,233 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "firstName": "Declan",
-    "lastName": "McCullough",
-    "email": "declanmcdjdjn@email.com",
-    "password": "rice1233",
-    "username": "declanrice"
+    "firstName": "Iyanuoluwa",
+    "lastName": "Margret",
+    "isAdmin": true,
+    "email": "iyanumargrate@email.com",
+    "password": "Miracle120",
+    "username": "Margreat11"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "petercrouch001@email.com",
+    "password": "besttimetobuy"
+}
+###
+GET http://localhost:3000/admin/users
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjBiODYxNDkzMTY1YzY3ZTQ0MGIxMSIsImZpcnN0TmFtZSI6IlBldGVyIiwiZW1haWwiOiJwZXRlcmNyb3VjaDAwMUBlbWFpbC5jb20iLCJpYXQiOjE3NDM4MjkxNjgsImV4cCI6MTc0Mzg3MjM2OH0.K5681Eeazbahn8pW_DunRu8tIlV2503t9p9eVfmVo2k
+ 
+
+###
+POST http://localhost:3000/product
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjBiODYxNDkzMTY1YzY3ZTQ0MGIxMSIsImZpcnN0TmFtZSI6IlBldGVyIiwiZW1haWwiOiJwZXRlcmNyb3VjaDAwMUBlbWFpbC5jb20iLCJpYXQiOjE3NDM4MjkxNjgsImV4cCI6MTc0Mzg3MjM2OH0.K5681Eeazbahn8pW_DunRu8tIlV2503t9p9eVfmVo2k
+
+{
+    "name": "iPhone Xr",
+    "description": "This iPhone Xr is the latest smartphone from Apple, featuring a stunning display and powerful performance.",
+    "price": 90,
+    "currency": "USD",
+    "category": "Smartphones-iPhone",
+    "imageUrl": "https://example.com/iPhonexr.jpg"
+}
+
+
+###
+GET http://localhost:3000/admin/retrieveProduct
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjBiODYxNDkzMTY1YzY3ZTQ0MGIxMSIsImZpcnN0TmFtZSI6IlBldGVyIiwiZW1haWwiOiJwZXRlcmNyb3VjaDAwMUBlbWFpbC5jb20iLCJpYXQiOjE3NDM4MjkxNjgsImV4cCI6MTc0Mzg3MjM2OH0.K5681Eeazbahn8pW_DunRu8tIlV2503t9p9eVfmVo2k
+
+
+{
+    "name": "Samsung Galaxy S21"
+    
+}
+
+###
+PUT http://localhost:3000/updateProduct
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjBiODYxNDkzMTY1YzY3ZTQ0MGIxMSIsImZpcnN0TmFtZSI6IlBldGVyIiwiZW1haWwiOiJwZXRlcmNyb3VjaDAwMUBlbWFpbC5jb20iLCJpYXQiOjE3NDM4MjkxNjgsImV4cCI6MTc0Mzg3MjM2OH0.K5681Eeazbahn8pW_DunRu8tIlV2503t9p9eVfmVo2k
+
+
+{
+    "name": "Samsung Galaxy S21",
+    "description": "Latestt Samsung smartphone with advanced features and fully amored",
+    "price": 130,
+    "currency": "USD",
+    "category": "Smartphones",
+    "imageUrl": "https://example.com/image.jpg"
+}
+
+###
+DELETE http://localhost:3000/deleteProduct
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjBiODYxNDkzMTY1YzY3ZTQ0MGIxMSIsImZpcnN0TmFtZSI6IlBldGVyIiwiZW1haWwiOiJwZXRlcmNyb3VjaDAwMUBlbWFpbC5jb20iLCJpYXQiOjE3NDM4MjkxNjgsImV4cCI6MTc0Mzg3MjM2OH0.K5681Eeazbahn8pW_DunRu8tIlV2503t9p9eVfmVo2k
+
+
+{
+    "name": "iPhone 11 Pro Maxx"
+}
+
+
+###
+POST  http://localhost:3000/cart
+Content-Type: application/json
+//authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjBiODYxNDkzMTY1YzY3ZTQ0MGIxMSIsImZpcnN0TmFtZSI6IlBldGVyIiwiZW1haWwiOiJwZXRlcmNyb3VjaDAwMUBlbWFpbC5jb20iLCJpYXQiOjE3NDM4MjkxNjgsImV4cCI6MTc0Mzg3MjM2OH0.K5681Eeazbahn8pW_DunRu8tIlV2503t9p9eVfmVo2k
+
+{
+    
+    "user": "67ed4107d6ecb436d70c392b",
+    "product": 
+        {
+            "product": "67eef3f87a58c027972c4c94", 
+            "quantity": 2
+        }
+    
+}
+
+###
+POST http://localhost:3000/updateCart
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWQ0OGQ0OGQyZTIxY2I3ZGFmNzlkZSIsImZpcnN0TmFtZSI6IkJlY2t5IiwiZW1haWwiOiJiYXJyeWJlY2t5MTAxQGVtYWlsLmNvbSIsImlhdCI6MTc0Mzc2NTI1MSwiZXhwIjoxNzQzODA4NDUxfQ.2GhKEyEhvwAIA-f8lgS-pbGXKwEnUUYRNCbdatBuH_8
+
+
+{
+    "user": "67f12b8688a74c0d3a6be2cf",
+    "product": 
+        {
+            
+            "product": "67f12b1a88a74c0d3a6be2cc", 
+            "quantity": 6
+        }
+    
+    
+}
+
+###
+DELETE http://localhost:3000/deleteCart
+Content-Type: application/json
+
+{
+    "user": "67ed42163ce37a769b9c7935",  // Replace with a valid user ID
+     
+}
+
+###
+DELETE http://localhost:3000/deleteAllCarts
+Content-Type: application/json
+
+{
+    "user": "67ed42163ce37a769b9c7935"
+}
+
+
+###
+POST http://localhost:3000/category
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjBiODYxNDkzMTY1YzY3ZTQ0MGIxMSIsImZpcnN0TmFtZSI6IlBldGVyIiwiZW1haWwiOiJwZXRlcmNyb3VjaDAwMUBlbWFpbC5jb20iLCJpYXQiOjE3NDM4MjkxNjgsImV4cCI6MTc0Mzg3MjM2OH0.K5681Eeazbahn8pW_DunRu8tIlV2503t9p9eVfmVo2k
+
+{
+    "name": "Dual-Sim Phones",
+    "description": "Latest Dual-Sim smartphones with advanced features",
+    "imageUrl": "https://example.com/duasim.jpg"
+}
+
+
+
+###
+GET http://localhost:3000/admin/retrieveCategory
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjBiODYxNDkzMTY1YzY3ZTQ0MGIxMSIsImZpcnN0TmFtZSI6IlBldGVyIiwiZW1haWwiOiJwZXRlcmNyb3VjaDAwMUBlbWFpbC5jb20iLCJpYXQiOjE3NDM4MjkxNjgsImV4cCI6MTc0Mzg3MjM2OH0.K5681Eeazbahn8pW_DunRu8tIlV2503t9p9eVfmVo2k
+
+{
+    "name": "Dual-Sim Phones"
+    
+}
+
+
+###
+POST http://localhost:3000/updateCategory
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjBiODYxNDkzMTY1YzY3ZTQ0MGIxMSIsImZpcnN0TmFtZSI6IlBldGVyIiwiZW1haWwiOiJwZXRlcmNyb3VjaDAwMUBlbWFpbC5jb20iLCJpYXQiOjE3NDM4MjkxNjgsImV4cCI6MTc0Mzg3MjM2OH0.K5681Eeazbahn8pW_DunRu8tIlV2503t9p9eVfmVo2k
+
+{
+     "name": "Basic Phones",
+    "description": "Latest Dual-Simm smartphones with advanced features and fully armored cases",
+    "imageUrl": "https://example.com/duasim.jpg"
+}
+
+
+###
+DELETE  http://localhost:3000/deleteCategory
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjBiODYxNDkzMTY1YzY3ZTQ0MGIxMSIsImZpcnN0TmFtZSI6IlBldGVyIiwiZW1haWwiOiJwZXRlcmNyb3VjaDAwMUBlbWFpbC5jb20iLCJpYXQiOjE3NDM4MjkxNjgsImV4cCI6MTc0Mzg3MjM2OH0.K5681Eeazbahn8pW_DunRu8tIlV2503t9p9eVfmVo2k
+
+{
+    "name": "Smartphones-android"
+}
+
+
+
+###
+POST http://localhost:3000/order
+Content-Type: application/json
+
+{
+    "user": "67f12b8688a74c0d3a6be2cf",
+    "products": [
+        {
+            "product": "67f0cf6003dd07378416c666",
+            "quantity": 8
+        }
+    ],
+    "amount":50,
+    "status": "Cancelled",
+    "shippingAddress": "Lane 4 Plot 1 Idumota Ikeja Lagos Nigeria",
+    "paymentMethod": "Bank Card"
+}
+
+###
+GET http://localhost:3000/admin/getorder
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjBiODYxNDkzMTY1YzY3ZTQ0MGIxMSIsImZpcnN0TmFtZSI6IlBldGVyIiwiZW1haWwiOiJwZXRlcmNyb3VjaDAwMUBlbWFpbC5jb20iLCJpYXQiOjE3NDM4MjkxNjgsImV4cCI6MTc0Mzg3MjM2OH0.K5681Eeazbahn8pW_DunRu8tIlV2503t9p9eVfmVo2k
+
+{
+    "user": "67f12b8688a74c0d3a6be2cf"
+
+}
+
+
+###
+POST http://localhost:3000/updateOrder
+Content-Type: application/json
+
+{
+    "user": "67f12b8688a74c0d3a6be2cf",
+    "products": [
+        {
+            "product": "67f0cf6003dd07378416c666",
+            "quantity": 2
+        }
+    ],
+    "amount":120,
+    "status": "Pending",
+    "shippingAddress": "Lane 4 platoon 2 Ikeja Lagos Nigeria",
+    "paymentMethod": "Paystack"   
+
+}
+
+
+###
+DELETE http://localhost:3000/deleteOrder
+Content-Type: application/json
+
+{
+    "user": "67f12b8688a74c0d3a6be2cf"
+
 }
