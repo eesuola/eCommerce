@@ -79,8 +79,6 @@ export const getCategory = async (req, res) => {
 
 export const updateCategory = async (req, res) => {
   try {
-    //console.log(req.body);
-
     const name = req.body.name;
     const updates = req.body;
 

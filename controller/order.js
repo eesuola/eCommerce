@@ -49,7 +49,6 @@ export const createOrder = async (req, res) => {
 
 export const getOrders = async (req, res) => {
   try {
-    // console.log(req.body);
     const user = req.body.user;
     const products = req.body.products;
     const amount = req.body.amount;
@@ -95,8 +94,6 @@ export const getOrders = async (req, res) => {
 
 export const updateOrder = async (req, res) => {
   try {
-    console.log(req.body);
-
     const user = req.body.user;
     const updates = req.body;
     const existingOrder = await Order.findOneAndUpdate(
@@ -125,19 +122,15 @@ export const updateOrder = async (req, res) => {
 
 export const deleteOrder = async (req, res) => {
   try {
-    //console.log(req.body);
     const user = req.body.user;
     const remove = req.body;
 
-    const existingOrder = await Order.findOneAndDelete(
-      { user: user },
-      remove,
-      { new: true },
-    );
+    const existingOrder = await Order.findOneAndDelete({ user: user }, remove, {
+      new: true,
+    });
     if (!existingOrder) {
       throw new Error("No order found for this user");
     }
-
   } catch (error) {
     console.error(error.message);
     if (!res.headersSent)

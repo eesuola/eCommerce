@@ -14,6 +14,4 @@ routes.get("/retrieveCategory", getCategory);
 routes.post("/updateCategory", updateCategory);
 routes.delete("/deleteCategory", deleteCategory);
 
-
-
 export default routes;

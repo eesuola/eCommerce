@@ -15,7 +15,7 @@ export const registration = async (req, res) => {
       throw new Error("User already exists");
     }
 
-    //console.log(req.body);
+
     if (!req.body.firstName || !req.body.email || !req.body.password) {
       throw new Error("First Name not provided");
     }
@@ -27,14 +27,14 @@ export const registration = async (req, res) => {
       message: "User registered successfully",
       data: user,
     });
-    // console.log(user);
+    
   } catch (error) {
     console.error(error.message);
     res.status(400).json({
       success: false,
       message: error.message,
     });
-    //console.log(error);
+    
   }
 };
 
@@ -45,12 +45,11 @@ export const login = async (req, res) => {
 
     const existingUser = await User.findOne({ email: email });
 
-    // if user does not exist throw this error
+  
     if (!existingUser) {
       throw new Error("Email not registered");
     }
-    // console.log(existingUser);
-    // compare the password
+    
     const isMatch = await bcrypt.compare(password, existingUser.password);
     console.log(isMatch);
 
@@ -78,7 +77,7 @@ export const login = async (req, res) => {
       message: `Welcome ${existingUser.firstName}`,
       token: token,
     });
-    // console.log(user);
+    
   } catch (error) {
     console.error(error.message);
     res.status(400).json({

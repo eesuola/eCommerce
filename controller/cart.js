@@ -101,7 +101,7 @@ export const updateCart = async (req, res) => {
 
 export const removeCart = async (req, res) => {
   try {
-    console.log(req.body);
+    
 
     const user = req.body.user;
     const remove = req.body;

@@ -8,8 +8,6 @@ import { registration } from "./authentication.js";
 
 export const createProduct = async (req, res) => {
   try {
-    // console.log(req.body);
-    // This check if the product already exists
     const existingProduct = await Product.findOne({ name: req.body.name });
     if (existingProduct) {
       throw new Error("Product already exists");
@@ -75,8 +73,6 @@ export const getProducts = async (req, res) => {
 
 export const updateProduct = async (req, res) => {
   try {
-    // console.log(req.body);
-
     const name = req.body.name;
     const updates = req.body;
 
@@ -104,8 +100,6 @@ export const updateProduct = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
   try {
-    // console.log(req.body);
-
     const name = req.body.name;
     const remove = req.body;
 

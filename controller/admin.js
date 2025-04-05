@@ -4,8 +4,6 @@ import Cart from "../model/cart.js";
 import Product from "../model/product.js";
 import Category from "../model/category.js";
 
-
-
 export const getUsers = async (req, res) => {
   const allUsers = await User.find();
 
@@ -54,4 +52,3 @@ export const getCarts = async (req, res) => {
     data: allCarts,
   });
 };
-

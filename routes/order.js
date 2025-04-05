@@ -6,13 +6,12 @@ import {
   createOrder,
   getOrders,
   updateOrder,
-  deleteOrder
+  deleteOrder,
 } from "../controller/order.js";
 
 routes.post("/order", createOrder);
 routes.get("/getOrder", getOrders);
 routes.post("/updateOrder", updateOrder);
 routes.delete("/deleteOrder", deleteOrder);
-
 
 export default routes;
